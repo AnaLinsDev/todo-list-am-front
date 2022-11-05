@@ -1,11 +1,8 @@
 import React from "react";
-import { Text, View, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import LottieView from "lottie-react-native";
 
 import { Button } from "../../components/Button";
-
-import gif from "./giphyWelcome.json";
+import { GifComponent } from "../../components/GifComponent";
 
 import * as S from "./styles";
 
@@ -18,10 +15,9 @@ export function Welcome() {
 
   return (
     <S.Container>
-      <S.Image>
-        <LottieView autoPlay style={{ width: 500 }} source={gif} />
-      </S.Image>
-      <S.Footer>
+      <GifComponent />
+      <S.Text>Welcome, Get started at your TO DO list</S.Text>
+      <S.Footer style={{ marginTop: '20%' }} >
         <Button
           title="Login"
           onPress={() => {
